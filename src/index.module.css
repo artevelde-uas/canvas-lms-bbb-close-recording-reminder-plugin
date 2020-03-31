@@ -6,5 +6,8 @@
 }
 
 .end-conference-label {
-  animation: blink 1s steps(5, start) infinite;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: steps(5, start);
+    animation-iteration-count: infinite;
 }
