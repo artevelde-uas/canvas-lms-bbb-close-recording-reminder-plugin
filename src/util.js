@@ -1,25 +1,27 @@
-import watched from 'watched';
 
+export function addReadyListener(selector, handler) {
+    let elements = document.querySelectorAll(selector);
 
-export function addDOMObserver(query, addedHandler, removedHandler = null) {
-    let nodeList = watched(document.body).querySelectorAll(query);
-    let elements = document.querySelectorAll(query);
-
-    if (elements.length > 0) {
-        elements.forEach(element => {
-            addedHandler(element);
-        });
-    }
-
-    nodeList.on('added', elements => {
-        elements.forEach(element => {
-            addedHandler(element);
-        });
+    elements.forEach(element => {
+        handler(element);
     });
 
-    nodeList.on('removed', elements => {
-        elements.forEach(element => {
-            removedHandler(element);
-        });
+    let handledElements = new Set(elements);
+
+    new MutationObserver((mutationRecords) => {
+        if (mutationRecords.some(mutation => (mutation.type === 'childList' && mutation.addedNodes.length))) {
+            let elements = document.querySelectorAll(selector);
+
+            elements.forEach(element => {
+                if (handledElements.has(element)) return;
+
+                handler(element);
+            });
+
+            handledElements = new Set(elements);
+        }
+    }).observe(document, {
+        childList: true,
+        subtree: true
     });
 }

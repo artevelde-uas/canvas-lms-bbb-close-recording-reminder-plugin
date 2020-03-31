@@ -1,4 +1,4 @@
-import { addDOMObserver } from './util';
+import { addReadyListener } from './util';
 
 import styles from './index.module.css';
 
@@ -10,7 +10,7 @@ export default function ({ router, i18n: { translate: __, setTranslations } }) {
 
         setTranslations(translations);
 
-        addDOMObserver('.close_conference_link', element => {
+        addReadyListener('.close_conference_link', element => {
             let row = element.closest('.ig-row');
 
             if (row === null) return;
