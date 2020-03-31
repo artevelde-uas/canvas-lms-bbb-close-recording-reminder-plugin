@@ -1,5 +1,7 @@
 import { addDOMObserver } from './util';
 
+import styles from './index.module.css';
+
 import translations from './i18n.json';
 
 
@@ -14,7 +16,7 @@ export default function ({ router, i18n: { translate: __, setTranslations } }) {
             if (row === null) return;
 
             row.querySelector('.ig-info > .has_actions').insertAdjacentHTML('beforeend', `
-                <span class="label label-warning ig-row-label">
+                <span class="label label-warning ig-row-label ${styles.endConferenceLabel}">
                     ${__('dont_forget_to_end_conference')}
                 </span>
             `);
