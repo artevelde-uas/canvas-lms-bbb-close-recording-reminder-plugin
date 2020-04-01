@@ -1,16 +1,14 @@
-import { addReadyListener } from './util';
-
 import styles from './index.module.css';
 
 import translations from './i18n.json';
 
 
-export default function ({ router, i18n: { translate: __, setTranslations } }) {
+export default function ({ router, dom, i18n: { translate: __, setTranslations } }) {
     router.addListener('courses.conferences', params => {
 
         setTranslations(translations);
 
-        addReadyListener('.close_conference_link', element => {
+        dom.onElementAdded('.close_conference_link', element => {
             let row = element.closest('.ig-row');
 
             if (row === null) return;
