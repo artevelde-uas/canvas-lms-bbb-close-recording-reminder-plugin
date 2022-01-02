@@ -1,13 +1,12 @@
+import { router, dom } from '@artevelde-uas/canvas-lms-app';
+
+import __ from './i18n';
+
 import styles from './index.module.css';
 
-import translations from './i18n.json';
 
-
-export default function ({ router, dom, i18n: { translate: __, setTranslations } }) {
-    router.addListener('courses.conferences', params => {
-
-        setTranslations(translations);
-
+export default function () {
+    router.onRoute('courses.conferences', () => {
         dom.onElementAdded('.close_conference_link', element => {
             let row = element.closest('.ig-row');
 
