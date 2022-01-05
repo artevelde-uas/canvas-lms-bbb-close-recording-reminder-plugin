@@ -8,7 +8,7 @@ import styles from './index.module.css';
 export default function () {
     router.onRoute('courses.conferences', () => {
         dom.onElementAdded('.close_conference_link', element => {
-            let row = element.closest('.ig-row');
+            const row = element.closest('.ig-row');
 
             if (row === null) return;
 
