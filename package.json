@@ -1,9 +1,11 @@
 {
   "name": "@artevelde-uas/canvas-lms-bbb-close-recording-reminder-plugin",
   "description": "Adds a blinking label to remind you to close the recording of a BigBlueButton conference",
+  "version": "1.0.0",
   "keywords": [
     "Canvas LMS"
   ],
+  "license": "ISC",
   "author": "Renaat De Muynck <renaat.demuynck@arteveldehs.be>",
   "repository": {
     "type": "git",
@@ -12,5 +14,8 @@
   "module": "src/index.js",
   "files": [
     "src/"
-  ]
+  ],
+  "peerDependencies": {
+    "@artevelde-uas/canvas-lms-app": "^1.6.0"
+  }
 }

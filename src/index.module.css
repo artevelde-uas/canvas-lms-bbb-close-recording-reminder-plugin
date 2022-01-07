@@ -1,0 +1,13 @@
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+.end-conference-label {
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: steps(5, start);
+    animation-iteration-count: infinite;
+}
