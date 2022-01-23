@@ -1,14 +1,30 @@
 {
     "en": {
-        "dont_forget_to_end_conference": "Don't forget to end this conference!"
+        "dont_forget_to_end_conference": "Don't forget to end this conference!",
+        "package": {
+            "title": "Show reminder to close BigBlueButton recordings",
+            "description": "Adds a blinking label to remind you to end the recording of a BigBlueButton conference."
+        }
     },
     "nl": {
-        "dont_forget_to_end_conference": "Vergeet deze vergadering niet te beëindigen!"
+        "dont_forget_to_end_conference": "Vergeet deze vergadering niet te beëindigen!",
+        "package": {
+            "title": "Herinnering weergeven om BigBlueButton-opnames te beëindigen",
+            "description": "Voegt een knipperend label toe om u eraan te herinneren de opname van een BigBlueButton-conferentie te beëindigen."
+        }
     },
     "fr": {
-        "dont_forget_to_end_conference": "N'oubliez pas de terminer cette conférence!"
+        "dont_forget_to_end_conference": "N'oubliez pas de terminer cette conférence!",
+        "package": {
+            "title": "Afficher un rappel pour terminer les enregistrements BigBlueButton",
+            "description": "Ajoute une étiquette clignotante pour vous rappeler de terminer l'enregistrement d'une conférence BigBlueButton."
+        }
     },
     "de": {
-        "dont_forget_to_end_conference": "Vergessen Sie nicht, diese Konferenz zu beenden!"
+        "dont_forget_to_end_conference": "Vergessen Sie nicht, diese Konferenz zu beenden!",
+        "package": {
+            "title": "Erinnerung zum Beenden von BigBlueButton-Aufzeichnungen anzeigen",
+            "description": "Fügt ein blinkendes Label hinzu, um Sie daran zu erinnern, die Aufzeichnung einer BigBlueButton-Konferenz zu beenden."
+        }
     }
 }
