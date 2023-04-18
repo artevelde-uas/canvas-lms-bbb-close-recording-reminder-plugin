@@ -9,7 +9,7 @@
   "author": "Renaat De Muynck <renaat.demuynck@arteveldehs.be>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/artevelde-uas/canvas-lms-better-left-menu-plugin.git"
+    "url": "https://github.com/artevelde-uas/canvas-lms-bbb-close-recording-reminder-plugin.git"
   },
   "module": "src/index.js",
   "files": [
